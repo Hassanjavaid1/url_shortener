@@ -1,6 +1,6 @@
 let express = require("express");
 
-let {router:database,con} = require("./database");
+let { router: database, con } = require("./database");
 let me = require("./me")
 let cors = require("cors");
 
@@ -14,5 +14,5 @@ app.get("/Server", (req, res) => {
 });
 
 app.use("/", database);
-app.use("/",me)
+app.use("/", me)
 app.listen(port, console.log("app is running on port:", port));

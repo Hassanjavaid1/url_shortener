@@ -31,6 +31,7 @@ router.get("/database", (req, res) => {
       return res.send("connect was successful");
     }
   });
+  
 });
 
 router.post("/database", (req, res, next) => {
