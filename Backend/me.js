@@ -15,7 +15,7 @@ router.get("/me/:code", (req, res) => {
           description: "The URL you are looking for is not exist😭",
         });
       }
-console.log("Hello in the world of web development!")
+      console.log("Hello in the world of web development!")
       let originalURL = result[0].original_url;
       return res.redirect(originalURL);
     });
