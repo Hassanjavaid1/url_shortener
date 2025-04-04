@@ -15,6 +15,7 @@ Server/.env
 dist
 dist-ssr
 *.local
+git rm -r --cached Server/.env
 
 
 # Editor directories and files
