@@ -27,6 +27,5 @@ app.use("/linkify", linkifyApi);
 
 app.listen(
   process.env.PORT,
-  "0.0.0.0",
   console.log("Server running port:", process.env.PORT)
 );
