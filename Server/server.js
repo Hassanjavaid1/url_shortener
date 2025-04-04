@@ -12,13 +12,13 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", async (req, res) => {
-  db.connect((err) => {
-    if (err) {
-      return console.log("Database connection failed");
-    }
-    console.log("Database connection success.");
-  });
   return res.send("Hello Wordl");
+  // db.connect((err) => {
+  //   if (err) {
+  //     return console.log("Database connection failed");
+  //   }
+  //   console.log("Database connection success.");
+  // });
 });
 
 app.use("/PostURL", PostURL);
