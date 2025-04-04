@@ -11,7 +11,7 @@ let app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/Server", async (req, res) => {
+app.get("/", async (req, res) => {
   db.connect((err) => {
     if (err) {
       return console.log("Database connection failed");
