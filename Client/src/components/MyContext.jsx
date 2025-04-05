@@ -14,7 +14,7 @@ export default function MyContext({ children }) {
       const res = await axios.get(url, {
         params: { userId },
       });
-     // console.log("DEFAUTL RESULTS", res.data);
+     console.log("DEFAUTL RESULTS",res);
       setHistoryData(res.data.data?.reverse());
     } catch (err) {
       console.error(err);
