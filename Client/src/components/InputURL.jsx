@@ -24,7 +24,7 @@ function InputURL() {
         inputURL === "" ||
         inputURL.startsWith("https://linkify-shortener.vercel.app/")
       ) {
-       // console.log("Wrong url", inputURL);
+        // console.log("Wrong url", inputURL);
         toast.dismiss();
         toast.error("Invalid Link");
         return null;
@@ -41,8 +41,8 @@ function InputURL() {
       setIsLoading(true);
 
       let postURL = await axios.post(
-       // "http://localhost:3000/PostURL",
-       "https://linkify-shortener.vercel.app/PostURL",
+        // "http://localhost:3000/PostURL",
+        "https://linkify-backend-den.vercel.app",
         {
           url: inputURL,
           userId: userId,
@@ -53,12 +53,12 @@ function InputURL() {
           },
         }
       );
-     // console.log("Post URL", postURL.data);
+      // console.log("Post URL", postURL.data);
       setTimeout(() => {
         setIsLoading(false);
         setInputURL(postURL?.data?.data.short_url);
         setHistoryData(postURL.data.data.user_history?.reverse());
-     //   console.log("Historydata", historyData);
+        //   console.log("Historydata", historyData);
 
         setTimeout(() => {
           inputRef.current.select();
