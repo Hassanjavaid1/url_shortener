@@ -63,12 +63,12 @@ export const URLsDetail = () => {
                     onClick={() =>
                       handleCopy(
                         id,
-                        handleCopy(
-                          id,
-                          `https://linkify-shortener.vercel.app/${short_url}/${user_id}`
-                        )
-                        // `http://localhost:3000/linkify/${short_url}/${user_id}`
+                        `https://linkify-shortener.vercel.app/${short_url}/${user_id}`
                       )
+                      // handleCopy(
+                      //   id,
+                      //   // `http://localhost:3000/linkify/${short_url}/${user_id}`
+                      // )
                     }
                     className="flex flex-col h-[35px] justify-center gap-2.5 p-2.5 bg-[#1c283fb0] rounded-[31px] relative cursor-pointer"
                   >
