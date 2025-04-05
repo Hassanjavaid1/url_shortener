@@ -1,7 +1,7 @@
 const db = require("../config/db");
 const route = require("express").Router();
 
-route.get("/linkify/:code/:user", (req, res) => {
+route.get("/linkify-shortener.vercel.app/:code/:user", (req, res) => {
   const { code, user } = req.params;
   console.log(code, user);
 

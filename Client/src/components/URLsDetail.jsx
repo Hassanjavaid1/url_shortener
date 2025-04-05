@@ -8,7 +8,7 @@ export const URLsDetail = () => {
   const [selectedItem, setSelectedItem] = useState();
   const [showCopiedIcon, setShowCopiedIcon] = useState(false);
 
-  console.log("user history", historyData);
+  // console.log("user history", historyData);
 
   // Handle Copy Short Url.
 
@@ -22,7 +22,7 @@ export const URLsDetail = () => {
       setShowCopiedIcon(false);
     }, 3000);
 
-    console.log("Copied Text", id, selectedValue);
+    // console.log("Copied Text", id, selectedValue);
   };
 
   return (
@@ -55,16 +55,19 @@ export const URLsDetail = () => {
               >
                 <div className="w-full inline-flex gap-2.5 flex-[0_0_auto] justify-center mt-[-7.00px] mb-[-7.00px] items-center sm:w-[50%] lg:w-[30%]">
                   <div className="relative overflow-hidden [font-family:'Inter-Light',Helvetica] font-light text-[#c9ced6] text-md ">
-                    {/* https://linkify.vercel.app/{short_url} */}
-                    http://localhost:3000/linkify/{short_url}/{user_id}
+                    https://linkify-shortener.vercel.app/{short_url}
+                    {/* http://localhost:3000/linkify/{short_url}/{user_id} */}
                   </div>
 
                   <div
                     onClick={() =>
-                      //  handleCopy(id, `https://linkify.vercel.app/${short_url}`)
                       handleCopy(
                         id,
-                        `http://localhost:3000/linkify/${short_url}/${user_id}`
+                        handleCopy(
+                          id,
+                          `https://linkify-shortener.vercel.app/${short_url}`
+                        )
+                        // `http://localhost:3000/linkify/${short_url}/${user_id}`
                       )
                     }
                     className="flex flex-col h-[35px] justify-center gap-2.5 p-2.5 bg-[#1c283fb0] rounded-[31px] relative cursor-pointer"

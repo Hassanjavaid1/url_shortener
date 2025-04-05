@@ -7,12 +7,14 @@ export default function MyContext({ children }) {
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchApi = async (userId) => {
-    console.log("userID", userId);
+   // console.log("userID", userId);
     try {
-      const res = await axios.get("http://localhost:3000/linkify", {
+      let url = "http://localhost:3000/linkify";
+      url = "https://linkify-shortener.vercel.app/linkify";
+      const res = await axios.get(url, {
         params: { userId },
       });
-      console.log("DEFAUTL RESULTS", res.data);
+     // console.log("DEFAUTL RESULTS", res.data);
       setHistoryData(res.data.data?.reverse());
     } catch (err) {
       console.error(err);

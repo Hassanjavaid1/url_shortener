@@ -5,7 +5,7 @@ const route = require("express").Router();
 
 route.post("/", (req, res) => {
   const { userId, url } = req?.body;
-  console.log("Data checked point", userId, url);
+  //console.log("Data checked point", userId, url);
   //check request url.
 
   if (!url || JSON.stringify(url).startsWith("https") || !userId) {
@@ -55,8 +55,8 @@ route.post("/", (req, res) => {
           status: "success",
           data: {
             original_url: url,
-            //short_url: `https://linkify.vercel.app/${result[0]?.short_url}`,
-            short_url: `http://localhost:3000/linkify/${result[0]?.short_url}/${userId}`,
+            short_url: `https://linkify-shortener.vercel.app/${result[0]?.short_url}`,
+           // short_url: `http://localhost:3000/linkify/${result[0]?.short_url}/${userId}`,
             clicks: result[0]?.clicks,
             created_at: result[0]?.created_at,
             user_id:result[0]?.user_id,
@@ -119,8 +119,8 @@ route.post("/", (req, res) => {
                 data: {
                   id: result[0]?.id,
                   original_url: result[0]?.original_url,
-                  //  short_url: `https://linkify.vercel.app/${result[0]?.short_url}`,
-                  short_url: `http://localhost:3000/linkify/${result[0]?.short_url}/${userId}`,
+                   short_url: `https://linkify-shortener.vercel.app/${result[0]?.short_url}`,
+                  //short_url: `http://localhost:3000/linkify/${result[0]?.short_url}/${userId}`,
                   clicks: result[0]?.clicks,
                   created_at: result[0]?.created_at,
                   user_id:result[0]?.user_id,
