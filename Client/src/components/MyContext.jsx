@@ -10,7 +10,7 @@ export default function MyContext({ children }) {
    // console.log("userID", userId);
     try {
       let url = "http://localhost:3000/linkify";
-      url = "https://linkify-shortener.vercel.app/linkify";
+      url = "https://linkify-shortener.vercel.app/";
       const res = await axios.get(url, {
         params: { userId },
       });
