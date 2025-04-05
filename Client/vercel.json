@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "rewrites": [
+      {
+        "source": "/:code/:user",
+        "destination": "https://linkify-backend-den.vercel.app/:code/:user"
+      }
+    ]
+  }
+  
