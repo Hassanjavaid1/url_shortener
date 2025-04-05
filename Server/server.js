@@ -23,7 +23,7 @@ app.get("/", async (req, res) => {
 
 app.use("linkify-shortener.vercel.app/PostURL", PostURL);
 app.use("/", GetURL);
-app.use("linkify-shortener.vercel.app/", linkifyApi);
+app.use("/", linkifyApi);
 
 app.listen(
   process.env.PORT || 3000,
