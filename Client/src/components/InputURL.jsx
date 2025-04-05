@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import axios from "axios";
 import { FaArrowRight } from "react-icons/fa";
 import { CiNoWaitingSign } from "react-icons/ci";

@@ -5,7 +5,7 @@ route.get("/:code/:user", (req, res) => {
   const { code, user } = req.params;
   console.log(code, user);
 
-  if (code) {
+  if (code && user) {
     let selectQuery =
       "SELECT original_url FROM urls WHERE short_url=? AND user_id=?";
     db.query(selectQuery, [code, user], (err, result) => {
