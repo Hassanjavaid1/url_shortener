@@ -55,7 +55,7 @@ export const URLsDetail = () => {
               >
                 <div className="w-full inline-flex gap-2.5 flex-[0_0_auto] justify-center mt-[-7.00px] mb-[-7.00px] items-center sm:w-[50%] lg:w-[30%]">
                   <div className="relative overflow-hidden [font-family:'Inter-Light',Helvetica] font-light text-[#c9ced6] text-md ">
-                    https://linkify-shortener.vercel.app/{short_url}
+                    https://linkify-shortener.vercel.app/{short_url}/{user_id}
                     {/* http://localhost:3000/linkify/{short_url}/{user_id} */}
                   </div>
 
@@ -65,7 +65,7 @@ export const URLsDetail = () => {
                         id,
                         handleCopy(
                           id,
-                          `https://linkify-shortener.vercel.app/${short_url}`
+                          `https://linkify-shortener.vercel.app/${short_url}/${user_id}`
                         )
                         // `http://localhost:3000/linkify/${short_url}/${user_id}`
                       )
