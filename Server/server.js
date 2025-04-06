@@ -10,7 +10,6 @@ let cors = require("cors");
 let app = express();
 
 app.use(
-  "*",
   cors({
     origin: "https://linkify-shortener.vercel.app",
   })
