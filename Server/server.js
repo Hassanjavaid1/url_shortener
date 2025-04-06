@@ -13,7 +13,6 @@ app.use(
   "*",
   cors({
     origin: "https://linkify-shortener.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
 
