@@ -9,11 +9,14 @@ const linkifyApi = require("./routes/linkifyApi");
 let cors = require("cors");
 let app = express();
 
-app.use(
-  cors({
-    origin: "https://linkify-shortener.vercel.app",
-  })
-);
+const corsOptions = {
+  origin: "https://linkify-shortener.vercel.app", // Allow only your specific frontend
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"], // Customize based on your needs
+  credentials: true, // Enable credentials if needed (cookies, auth headers, etc.)
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 

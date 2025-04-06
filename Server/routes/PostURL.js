@@ -3,12 +3,6 @@ const crypto = require("crypto");
 const cors = require("cors");
 const route = require("express").Router();
 
-app.use(
-  cors({
-    origin: "https://linkify-shortener.vercel.app",
-  })
-);
-
 route.post("/", (req, res) => {
   const { userId, url } = req?.body;
   //console.log("Data checked point", userId, url);

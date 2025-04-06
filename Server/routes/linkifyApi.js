@@ -1,12 +1,5 @@
 const db = require("../config/db");
 const route = require("express").Router();
-const cors = require("cors")
-
-app.use(
-  cors({
-    origin: "https://linkify-shortener.vercel.app",
-  })
-);
 
 route.get("/", (req, res) => {
   const { userId } = req.query;
