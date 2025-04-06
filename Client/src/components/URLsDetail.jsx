@@ -51,7 +51,7 @@ export const URLsDetail = () => {
             ({ original_url, short_url, clicks, created_at, id, user_id }) => (
               <div
                 key={id}
-                className="flex h-[63px] items-center justify-between text-center gap-4 pl-[25px] pr-[25.19px] py-[21px] relative self-stretch w-full bg-[#181e2938] shadow-[0px_4px_10px_#0000001a] backdrop-blur-[28px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(28px)_brightness(100%)]"
+                className="flex h-fit items-center justify-between text-center gap-4 pl-[25px] pr-[25.19px] py-[21px] relative self-stretch w-full bg-[#181e2938] shadow-[0px_4px_10px_#0000001a] backdrop-blur-[28px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(28px)_brightness(100%)]"
               >
                 <div className="w-full inline-flex gap-2.5 flex-[0_0_auto] justify-center mt-[-7.00px] mb-[-7.00px] items-center sm:w-[50%] lg:w-[30%]">
                   <div className="relative overflow-hidden [font-family:'Inter-Light',Helvetica] font-light text-[#c9ced6] text-md ">
