@@ -8,9 +8,11 @@ const linkifyApi = require("./routes/linkifyApi");
 
 let cors = require("cors");
 let app = express();
+
 app.use(
   cors({
     origin: "https://linkify-shortener.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
 
